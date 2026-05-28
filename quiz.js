@@ -562,38 +562,63 @@ const questions = {
   },
 
 q8: {
-    text: "Does your tradition ordain women to the pastoral office?",
-    sub: "This is one of the clearest dividing lines among Lutherans.",
-    opts: [
-      { text: "No — only men are ordained to the pastoral office", next: 'q8b' },
-      { text: "Yes — women may be ordained as pastors", next: 'q9' }
-    ]
-  },
+  text: "Does your tradition ordain women to the pastoral office?",
+  sub: "This is one of the clearest dividing lines among Lutherans.",
+  opts: [
+    { text: "No — only men are ordained to the pastoral office", next: 'q8b' },
+    { text: "Yes — women may be ordained as pastors", next: 'q9' }
+  ]
+},
 
-  q8b: {  // Conservative side
-    text: "Which conservative Lutheran tradition fits you best?",
-    sub: "The confessional world has several distinct groups.",
-    opts: [
-      { text: "Lutheran Church–Missouri Synod (LCMS)", next: 'RESULT:LU_LCMS' },
-      { text: "Wisconsin Evangelical Lutheran Synod (WELS) — stricter on fellowship and women's roles", next: 'RESULT:LU_WELS' },
-      { text: "Evangelical Lutheran Synod (ELS)", next: 'RESULT:LU_ELS' },
-      { text: "Church of the Lutheran Confession (CLC)", next: 'RESULT:LU_CLC' },
-      { text: "Association of Free Lutheran Congregations (AFLC)", next: 'RESULT:LU_AFLC' },
-      { text: "Smaller independent or micro-synod confessional group", next: 'RESULT:LU_CONFESSIONAL' }
-    ]
-  },
+q8b: {
+  text: "How strict is your view of church fellowship?",
+  sub: "This helps separate LCMS-style, WELS/ELS-style, and smaller confessional Lutheran traditions.",
+  opts: [
+    { text: "Very strict — prayer, worship, communion, and ministry cooperation should only happen with those in full doctrinal agreement", next: 'q8c' },
+    { text: "Strict, but not as closed — altar and pulpit fellowship should require doctrinal agreement, but cooperation in civic or social matters can happen", next: 'RESULT:LU_LCMS' },
+    { text: "Confessional, but congregations should have more local freedom and pietistic/simple-church influence", next: 'RESULT:LU_AFLC' },
+    { text: "Very conservative and independent, often separated from larger Lutheran bodies over doctrinal concerns", next: 'RESULT:LU_CONFESSIONAL' }
+  ]
+},
 
-  q9: {  // More moderate / post-ELCA side
-    text: "Which Lutheran tradition best describes your home?",
-    sub: "Several groups emerged from or relate to the ELCA.",
-    opts: [
-      { text: "Evangelical Lutheran Church in America (ELCA)", next: 'RESULT:LU_ELCA' },
-      { text: "Lutheran Congregations in Mission for Christ (LCMC)", next: 'RESULT:LU_LCMC' },
-      { text: "North American Lutheran Church (NALC)", next: 'RESULT:LU_NALC' },
-      { text: "American Association of Lutheran Churches (AALC)", next: 'RESULT:LU_AALC' },
-      { text: "Church of the Lutheran Brethren (CLBA)", next: 'RESULT:LU_CLBA' }
-    ]
-  },
+q8c: {
+  text: "How would your tradition usually describe its separation from other Lutheran bodies?",
+  sub: "This narrows the strict conservative side.",
+  opts: [
+    { text: "It emphasizes very strict fellowship practice and has a large, historic Upper Midwest presence", next: 'RESULT:LU_WELS' },
+    { text: "It is very similar to WELS, smaller, and historically tied to Norwegian Lutheran roots", next: 'RESULT:LU_ELS' },
+    { text: "It separated over doctrinal controversy and tends to be very small, strict, and separatist", next: 'RESULT:LU_CLC' }
+  ]
+},
+
+q9: {
+  text: "How progressive or traditional is your Lutheran church body?",
+  sub: "This helps distinguish ELCA, NALC, LCMC, AALC, and Lutheran Brethren-style groups.",
+  opts: [
+    { text: "Broad, mainline, and progressive — women pastors are normal, LGBTQ inclusion is common, and ecumenical cooperation is strong", next: 'RESULT:LU_ELCA' },
+    { text: "Moderate-to-conservative and reform-minded — left the ELCA world but still allows women pastors", next: 'q9b' },
+    { text: "Confessional and conservative, with strong concern for biblical authority, but not identical to LCMS/WELS", next: 'q9c' },
+    { text: "Pietistic, congregational, evangelistic, and often more low-church than typical Lutheran synods", next: 'RESULT:LU_CLBA' }
+  ]
+},
+
+q9b: {
+  text: "Which emphasis sounds more like your church?",
+  sub: "NALC and LCMC overlap, but they have different flavors.",
+  opts: [
+    { text: "More structured, more church-body identity, more catholic/confessional feel, and generally traditional on sexuality", next: 'RESULT:LU_NALC' },
+    { text: "More congregational, network-like, flexible, mission-focused, and locally governed", next: 'RESULT:LU_LCMC' }
+  ]
+},
+
+q9c: {
+  text: "How does your tradition relate to historic Lutheran confessionalism?",
+  sub: "This separates AALC-type Lutheranism from broader moderate groups.",
+  opts: [
+    { text: "Strongly confessional, conservative, and historically connected to older American Lutheran synod traditions", next: 'RESULT:LU_AALC' },
+    { text: "Conservative but more congregational, revivalist, pietistic, or free-church in style", next: 'RESULT:LU_CLBA' }
+  ]
+},
    
   q10: {
     text: "How do you understand divine election and salvation?",
