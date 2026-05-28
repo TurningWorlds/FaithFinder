@@ -59,19 +59,82 @@ RC: {
   },
    
   /* ── LUTHERAN ── */
-  LU_LCMS: {
-    name: "Lutheran (LCMS)",
-    family: "Magisterial Reformation — Confessional Lutheran",
-    tagline: "Sola gratia, sola fide — the Book of Concord stands",
-    desc: "You are a confessional Lutheran in the Missouri Synod tradition — committed to the Book of Concord, real presence in the Eucharist, closed communion, and Scripture's inerrancy. You value clear Lutheran identity.",
-    traits: [{ label: "Sacraments", val: "Two — real presence (Luther)" },{ label: "Authority", val: "Scripture (inerrant) + Book of Concord" },{ label: "Worship", val: "Liturgical, historic Lutheran rite" },{ label: "Soteriology", val: "Forensic justification, monergistic" }]
-  },
   LU_ELCA: {
-    name: "Lutheran (ELCA)",
-    family: "Magisterial Reformation — Mainline Lutheran",
+    name: "Evangelical Lutheran Church in America (ELCA)",
+    family: "Mainline Lutheran",
     tagline: "Sola gratia, sola fide — in dialogue with the modern world",
-    desc: "You are an ELCA Lutheran — holding to core Lutheran theology while also embracing women's ordination, LGBTQ+ inclusion, and broad ecumenism.",
-    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Lutheran tradition" },{ label: "Worship", val: "Liturgical with contemporary options" },{ label: "Soteriology", val: "Forensic justification, grace-centered" }]
+    desc: "You are part of the largest Lutheran body in the US. The ELCA is known for its ecumenical openness, women's ordination, and progressive stances on social issues while maintaining core Lutheran theology like real presence in the Eucharist.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Lutheran tradition" },{ label: "Worship", val: "Liturgical with contemporary options" },{ label: "Soteriology", val: "Grace-centered, rejects perseverance of the saints" }]
+  },
+  LU_LCMS: {
+    name: "Lutheran Church–Missouri Synod (LCMS)",
+    family: "Confessional Lutheran",
+    tagline: "Sola gratia, sola fide — the Book of Concord stands",
+    desc: "You are in the second-largest Lutheran body in America. The LCMS is strongly confessional, holds to biblical inerrancy, practices closed communion, ordains only men, and emphasizes doctrinal unity.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture (inerrant) + Book of Concord" },{ label: "Worship", val: "Liturgical, historic Lutheran rite" },{ label: "Fellowship", val: "Closed communion" }]
+  },
+  LU_WELS: {
+    name: "Wisconsin Evangelical Lutheran Synod (WELS)",
+    family: "Confessional Lutheran (Strict)",
+    tagline: "The truth of God’s Word — no compromise",
+    desc: "You belong to the WELS, often seen as one of the most conservative Lutheran bodies. You require full doctrinal agreement even for joint prayer, practice very strict closed communion, and do not allow women's suffrage in church voting.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + full Book of Concord" },{ label: "Fellowship", val: "Very strict" },{ label: "Worship", val: "Liturgical, conservative" }]
+  },
+  LU_ELS: {
+    name: "Evangelical Lutheran Synod (ELS)",
+    family: "Confessional Lutheran",
+    tagline: "Grace alone, faith alone, Scripture alone",
+    desc: "You are part of the ELS, a smaller confessional synod with strong Norwegian roots, closely aligned with the WELS. You emphasize doctrinal purity and historic Lutheran teaching.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Book of Concord" },{ label: "Worship", val: "Traditional liturgical" }]
+  },
+  LU_LCMC: {
+    name: "Lutheran Congregations in Mission for Christ (LCMC)",
+    family: "Post-ELCA Evangelical Lutheran",
+    tagline: "Congregational freedom with Lutheran confession",
+    desc: "You are in LCMC, formed by congregations that left the ELCA. You value strong congregational autonomy, allow women's ordination, and blend Lutheran theology with contemporary worship and evangelical energy.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Lutheran Confessions" },{ label: "Polity", val: "Highly congregational" },{ label: "Worship", val: "Varied — traditional to contemporary" }]
+  },
+  LU_NALC: {
+    name: "North American Lutheran Church (NALC)",
+    family: "Confessing Lutheran",
+    tagline: "Faithful to Scripture and the Lutheran Confessions",
+    desc: "You belong to the NALC, another major group that broke from the ELCA. You hold a more structured denominational model, value liturgical worship, ordain women, and seek to be both evangelical and catholic.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Book of Concord" },{ label: "Worship", val: "Liturgical and sacramental" }]
+  },
+  LU_AFLC: {
+    name: "Association of Free Lutheran Congregations (AFLC)",
+    family: "Free Lutheran",
+    tagline: "Free and living congregations",
+    desc: "You are part of the AFLC, rooted in Norwegian revival tradition. You emphasize congregational freedom, liturgical simplicity, conservative theology, and do not ordain women.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Lutheran Confessions" },{ label: "Polity", val: "Strongly congregational" },{ label: "Worship", val: "Simpler, revival-influenced" }]
+  },
+  LU_CLBA: {
+    name: "Church of the Lutheran Brethren of America (CLBA)",
+    family: "Lutheran Brethren",
+    tagline: "Pure congregations through discipline",
+    desc: "You belong to the CLBA, a small but active group with Norwegian Haugean revival roots. You stress personal faith, church discipline, foreign missions, and maintain conservative theology with simpler worship.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Lutheran Confessions" },{ label: "Discipline", val: "Emphasis on pure membership" },{ label: "Worship", val: "Liturgically informal" }]
+  },
+  LU_CLC: {
+    name: "Church of the Lutheran Confession (CLC)",
+    family: "Strict Confessional Lutheran",
+    tagline: "Standing firmly on the old Synodical Conference principles",
+    desc: "You are in the CLC, formed by those who felt the WELS and ELS were not strict enough in applying fellowship principles. You uphold very rigorous confessional standards and biblical inerrancy.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + full Book of Concord" },{ label: "Fellowship", val: "Extremely strict" }]
+  },
+  LU_AALC: {
+    name: "American Association of Lutheran Churches (AALC)",
+    family: "Confessional Lutheran",
+    tagline: "Standing firm on the Word of God",
+    desc: "You belong to the AALC, a smaller group that declined to join the ELCA merger. You share much in common with the LCMS and have fellowship arrangements with them.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Book of Concord" },{ label: "Worship", val: "Liturgical" }]
+  },
+  LU_CONFESSIONAL: {
+    name: "Independent / Micro-Synod Confessional Lutheran",
+    family: "Strict Confessional Lutheran",
+    tagline: "The pure marks of the Church — Word and Sacrament",
+    desc: "You identify with smaller independent confessional Lutheran congregations or micro-synods that prioritize complete fidelity to the Book of Concord, often with stricter practices than even the major conservative bodies.",
+    traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Full subscription to the Book of Concord" },{ label: "Fellowship", val: "Very strict" }]
   },
 
   /* ── ANGLICAN ── */
@@ -498,24 +561,40 @@ const questions = {
     ]
   },
 
-  q8: {
+q8: {
     text: "Does your tradition ordain women to the pastoral office?",
-    sub: "This question divides LCMS from ELCA — the two largest Lutheran bodies in America.",
+    sub: "This is one of the clearest dividing lines among Lutherans.",
     opts: [
-      { text: "No — Scripture restricts the ordained pastoral office to qualified men (1 Tim 2, 1 Cor 14)", next: 'RESULT:LU_LCMS' },
-      { text: "Yes — women may be ordained and serve as pastors and bishops", next: 'q9' }
+      { text: "No — only men are ordained to the pastoral office", next: 'q8b' },
+      { text: "Yes — women may be ordained as pastors", next: 'q9' }
     ]
   },
 
-  q9: {
-    text: "Which tradition shapes your Lutheran identity?",
-    sub: "ELCA covers a wide range — from moderate evangelical to quite progressive.",
+  q8b: {  // Conservative side
+    text: "Which conservative Lutheran tradition fits you best?",
+    sub: "The confessional world has several distinct groups.",
     opts: [
-      { text: "ELCA — I'm liturgical, ecumenical, and open to full LGBTQ+ inclusion in church life", next: 'RESULT:LU_ELCA' },
-      { text: "Anglican / Episcopal — I'm drawn more to the via media and the Book of Common Prayer than Lutheran distinctives", next: 'q17' }
+      { text: "Lutheran Church–Missouri Synod (LCMS)", next: 'RESULT:LU_LCMS' },
+      { text: "Wisconsin Evangelical Lutheran Synod (WELS) — stricter on fellowship and women's roles", next: 'RESULT:LU_WELS' },
+      { text: "Evangelical Lutheran Synod (ELS)", next: 'RESULT:LU_ELS' },
+      { text: "Church of the Lutheran Confession (CLC)", next: 'RESULT:LU_CLC' },
+      { text: "Association of Free Lutheran Congregations (AFLC)", next: 'RESULT:LU_AFLC' },
+      { text: "Smaller independent or micro-synod confessional group", next: 'RESULT:LU_CONFESSIONAL' }
     ]
   },
 
+  q9: {  // More moderate / post-ELCA side
+    text: "Which Lutheran tradition best describes your home?",
+    sub: "Several groups emerged from or relate to the ELCA.",
+    opts: [
+      { text: "Evangelical Lutheran Church in America (ELCA)", next: 'RESULT:LU_ELCA' },
+      { text: "Lutheran Congregations in Mission for Christ (LCMC)", next: 'RESULT:LU_LCMC' },
+      { text: "North American Lutheran Church (NALC)", next: 'RESULT:LU_NALC' },
+      { text: "American Association of Lutheran Churches (AALC)", next: 'RESULT:LU_AALC' },
+      { text: "Church of the Lutheran Brethren (CLBA)", next: 'RESULT:LU_CLBA' }
+    ]
+  },
+   
   q10: {
     text: "How do you understand divine election and salvation?",
     sub: "The Calvinist/Arminian divide — arguably the defining question of Protestant soteriology.",
