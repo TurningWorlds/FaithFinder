@@ -5,47 +5,47 @@ const LETTERS = ['A','B','C','D','E','F'];
 ───────────────────────────────────────────────────────── */
 const denominations = {
 
-  /* ── CATHOLIC / EASTERN ── */
+/* ── CATHOLIC / EASTERN ── */
   RC: {
     name: "Roman Catholic",
     family: "Western Catholic",
     tagline: "The fullness of the faith, with Peter as visible head",
-    desc: "You find yourself most at home in Roman Catholicism — its magisterial teaching authority, seven sacraments, rich tradition of Marian devotion, natural law ethics, and insistence that the Church founded by Christ continues visibly in communion with Rome. You value the catechism's comprehensiveness and distrust pick-and-choose spirituality.",
+    desc: "You find yourself most at home in Roman Catholicism — its teaching authority, seven sacraments, rich tradition of Marian devotion, natural law ethics, and the belief that the Church founded by Christ continues visibly in communion with Rome. You value the Catechism's depth and prefer a consistent, historic faith over pick-and-choose spirituality.",
     traits: [{ label: "Sacraments", val: "Seven — transubstantiation" },{ label: "Authority", val: "Scripture + Tradition + Magisterium" },{ label: "Worship", val: "Roman Rite (Ordinary Form)" },{ label: "Soteriology", val: "Synergistic — grace + faith + works" }]
   },
   RC_TRAD: {
     name: "Traditional Latin Mass Catholic",
     family: "Western Catholic (Traditionalist)",
     tagline: "Lex orandi, lex credendi — the ancient Mass unchanged",
-    desc: "You are drawn to the traditionalist wing of Roman Catholicism — the Extraordinary Form of the Mass (Tridentine), the 1962 calendar, Gregorian chant, the Baltimore Catechism. You likely view the liturgical reforms of Vatican II with significant unease and suspect that the Novus Ordo has impoverished the faith. You may worship with the FSSP, ICK, or in an SSPX-adjacent community.",
+    desc: "You are drawn to the traditionalist side of Roman Catholicism — the Extraordinary Form of the Mass, the 1962 calendar, Gregorian chant, and the Baltimore Catechism. You tend to view the liturgical changes after Vatican II with concern and feel the older form better preserves the faith.",
     traits: [{ label: "Sacraments", val: "Seven — strict transubstantiation" },{ label: "Authority", val: "Pre-Vatican II Magisterium" },{ label: "Worship", val: "Extraordinary Form / TLM" },{ label: "Soteriology", val: "Trent — merit, purgatory, indulgences" }]
   },
   EC: {
     name: "Eastern Catholic",
     family: "Eastern Catholic (in communion with Rome)",
     tagline: "The Eastern lung of the one Church — Rome's communion, Byzantine soul",
-    desc: "You are Eastern Catholic — Byzantine, Coptic, Syriac, Armenian, or another Eastern rite in full communion with Rome. You share the Pope's authority and the Catholic Faith, but your liturgical and spiritual patrimony is Eastern: the Divine Liturgy, theosis theology, iconography, and a married priesthood. You occupy a unique and often misunderstood position bridging East and West.",
+    desc: "You are Eastern Catholic — Byzantine, Coptic, Syriac, Armenian, or another Eastern rite in full communion with Rome. You share the Catholic faith and the Pope's authority, but your worship and spirituality follow the Eastern tradition: the Divine Liturgy, theosis, icons, and often a married priesthood.",
     traits: [{ label: "Sacraments", val: "Seven mysteries" },{ label: "Authority", val: "Rome + Eastern Tradition" },{ label: "Worship", val: "Eastern Rite (Byzantine, etc.)" },{ label: "Soteriology", val: "Synergistic, theosis-oriented" }]
   },
   EO: {
     name: "Eastern Orthodox",
     family: "Ancient & Eastern",
     tagline: "One, Holy, Catholic, and Apostolic — the unbroken stream",
-    desc: "You are drawn to the ancient, mystical tradition of Eastern Orthodoxy. Your instincts run toward theosis rather than forensic justification, toward the icon rather than the text alone, toward the Fathers as living authorities, and toward the Divine Liturgy as heaven on earth. You distrust Western scholasticism and are suspicious of both Rome's papal overreach and Protestantism's fragmentation.",
+    desc: "You are drawn to the ancient, mystical tradition of Eastern Orthodoxy. You lean toward theosis, icons, the Church Fathers, and the Divine Liturgy as heaven on earth. You tend to be wary of both Roman centralization and Protestant fragmentation.",
     traits: [{ label: "Sacraments", val: "Seven holy mysteries" },{ label: "Authority", val: "Scripture + Holy Tradition" },{ label: "Worship", val: "Byzantine Divine Liturgy" },{ label: "Soteriology", val: "Theosis / synergistic" }]
   },
   OO: {
     name: "Oriental Orthodox",
     family: "Ancient Eastern (Non-Chalcedonian)",
     tagline: "The ancient faith before the Council of Chalcedon divided the East",
-    desc: "You belong to the Oriental Orthodox family — Coptic, Ethiopian, Eritrean, Armenian, Syriac (Jacobite), or Malankara. Your churches rejected the Council of Chalcedon (451 AD) and hold to miaphysite Christology, not the Chalcedonian two-nature definition. Yours is one of the most ancient continuous Christian traditions, with a rich liturgical and ascetic heritage that predates most other Christian institutions.",
+    desc: "You belong to the Oriental Orthodox family — Coptic, Ethiopian, Eritrean, Armenian, Syriac, or Malankara. Your churches maintained the miaphysite understanding of Christ and represent one of the oldest continuous Christian traditions.",
     traits: [{ label: "Sacraments", val: "Seven mysteries" },{ label: "Authority", val: "Pre-Chalcedonian Holy Tradition" },{ label: "Worship", val: "Coptic/Ethiopian/Armenian liturgy" },{ label: "Christology", val: "Miaphysite (one nature)" }]
   },
   AC: {
     name: "Old Catholic",
     family: "Independent Catholic",
     tagline: "Catholic faith without the First Vatican Council's excesses",
-    desc: "You are Old Catholic — part of the Utrecht Union or a related independent Catholic body. You broke from Rome over the First Vatican Council's definition of papal infallibility (1870), which you consider an innovation without patristic warrant. You hold Catholic sacramental theology, apostolic succession, and the seven sacraments, but reject the papacy's universal jurisdiction and infallibility claims.",
+    desc: "You are Old Catholic — part of the Utrecht Union or a related independent Catholic body. You maintain Catholic sacraments and apostolic succession but rejected the definition of papal infallibility in 1870.",
     traits: [{ label: "Sacraments", val: "Seven — valid succession" },{ label: "Authority", val: "Ecumenical councils (first seven)" },{ label: "Worship", val: "Western liturgy (vernacular)" },{ label: "Soteriology", val: "Catholic — synergistic" }]
   },
 
@@ -54,14 +54,14 @@ const denominations = {
     name: "Lutheran (LCMS)",
     family: "Magisterial Reformation — Confessional Lutheran",
     tagline: "Sola gratia, sola fide — the Book of Concord stands",
-    desc: "You are a confessional Lutheran of the Missouri Synod variety — committed to the Lutheran Confessions in the Book of Concord, real presence in the Eucharist, closed communion, inerrancy of Scripture, and the historic restriction of ordination to men. You are suspicious of both liberal drift and charismatic enthusiasm, and you care deeply about Lutheran identity over against both Rome and Protestantism.",
+    desc: "You are a confessional Lutheran in the Missouri Synod tradition — committed to the Book of Concord, real presence in the Eucharist, closed communion, and Scripture's inerrancy. You value clear Lutheran identity.",
     traits: [{ label: "Sacraments", val: "Two — real presence (Luther)" },{ label: "Authority", val: "Scripture (inerrant) + Book of Concord" },{ label: "Worship", val: "Liturgical, historic Lutheran rite" },{ label: "Soteriology", val: "Forensic justification, monergistic" }]
   },
   LU_ELCA: {
     name: "Lutheran (ELCA)",
     family: "Magisterial Reformation — Mainline Lutheran",
     tagline: "Sola gratia, sola fide — in dialogue with the modern world",
-    desc: "You are an ELCA Lutheran — holding Lutheran sacramental theology and the preaching of grace while also embracing women's ordination, full LGBTQ+ inclusion, and an ecumenical openness toward Rome, Canterbury, and Reformed churches. You care about the Lutheran confessional heritage but hold it in dynamic tension with the need for the church to speak to contemporary culture.",
+    desc: "You are an ELCA Lutheran — holding to core Lutheran theology while also embracing women's ordination, LGBTQ+ inclusion, and broad ecumenism.",
     traits: [{ label: "Sacraments", val: "Two — real presence" },{ label: "Authority", val: "Scripture + Lutheran tradition" },{ label: "Worship", val: "Liturgical with contemporary options" },{ label: "Soteriology", val: "Forensic justification, grace-centered" }]
   },
 
@@ -70,14 +70,14 @@ const denominations = {
     name: "Anglican (ACNA / Global South)",
     family: "Reformed Catholic — Traditional Anglican",
     tagline: "The via media, held with confessional fidelity",
-    desc: "You are a traditional Anglican — perhaps in the Anglican Church in North America, the Church of Nigeria, GAFCON, or another province that has broken from The Episcopal Church over sexuality and doctrine. You value the Book of Common Prayer (1662 or 2019), apostolic succession, the Thirty-Nine Articles, classical Anglican liturgy, and biblical sexual ethics. You believe TEC abandoned the faith of the Reformers.",
+    desc: "You are a traditional Anglican — likely in ACNA, GAFCON, or a Global South province. You value the Book of Common Prayer, the Thirty-Nine Articles, and historic Anglican liturgy and ethics.",
     traits: [{ label: "Sacraments", val: "Two — spiritual presence" },{ label: "Authority", val: "Scripture, BCP, 39 Articles" },{ label: "Worship", val: "BCP 1662 or 2019, liturgical" },{ label: "Soteriology", val: "Reformed-Catholic, justification by faith" }]
   },
   AN_PROG: {
     name: "Episcopal (TEC / Progressive Anglican)",
     family: "Reformed Catholic — Progressive Anglican",
     tagline: "The via media, held with generous orthodoxy",
-    desc: "You are a progressive Anglican or Episcopalian — fully committed to women's ordination and consecration as bishops, full LGBTQ+ inclusion and blessing of same-sex unions, and an understanding of the tradition as always developing. You value the liturgical inheritance of Anglicanism (the BCP, the lectionary, the creeds) while insisting that the gospel demands radical welcome. You are probably in TEC, the Church of England's liberal wing, or the Anglican Church of Canada.",
+    desc: "You are a progressive Anglican or Episcopalian — supportive of women's ordination, LGBTQ+ inclusion, and seeing the tradition as something that continues to develop.",
     traits: [{ label: "Sacraments", val: "Two — spiritual presence" },{ label: "Authority", val: "Scripture through reason & tradition" },{ label: "Worship", val: "BCP liturgy, inclusive language" },{ label: "Soteriology", val: "Broad, emphasizes transformation" }]
   },
 
