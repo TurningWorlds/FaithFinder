@@ -6,7 +6,14 @@ const LETTERS = ['A','B','C','D','E','F'];
 const denominations = {
 
 /* ── CATHOLIC / EASTERN ── */
-  RC: {
+   NOVAT: {
+    name: "Novatianist",
+    family: "Early Church Rigorist",
+    tagline: "The Pure Church — no compromise with the lapsed",
+    desc: "You resonate with the ancient Novatianist movement. Following the intense persecutions of the 3rd century, they insisted on maintaining a pure church. They refused to readmit Christians who had denied the faith or sacrificed to pagan gods (the lapsi), believing such grave sins could not be forgiven by the church on earth — only by God after lifelong penance. They saw themselves as the faithful remnant preserving the church’s holiness.",
+    traits: [{ label: "Church", val: "A congregation of saints only" },{ label: "Discipline", val: "No readmission for serious sins" },{ label: "Sacraments", val: "Rebaptism of those from other groups" },{ label: "Morality", val: "Strict — no second marriage" }]
+  },
+   RC: {
     name: "Roman Catholic",
     family: "Western Catholic",
     tagline: "The fullness of the faith, with Peter as visible head",
@@ -423,6 +430,7 @@ const questions = {
       { text: "The Father, Son, and Holy Ghost are three distinct beings — not one substance", next: 'RESULT:LDS' },
       { text: "Jesus is a created being — not God, but the first and greatest of God's creations", next: 'RESULT:JW' },
       { text: "I am post-Christian or pluralist — traditional doctrines about Jesus don't define my faith", next: 'RESULT:UU' }
+      { text: "I believe the church must remain completely pure — no readmitting those who seriously fall away under persecution", next: 'RESULT:NOVAT' },
     ]
   },
 
