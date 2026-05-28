@@ -420,8 +420,8 @@ const questions = {
     sub: "The most fundamental dividing line in all of Christian history.",
     opts: [
       { text: "Yes — Father, Son, and Holy Spirit: one God, three persons, co-equal and co-eternal. The Nicene Creed is correct.", next: 'q2' },
-      { text: "The Father, Son, and Holy Ghost are three distinct beings — not one substance (Latter-day Saint view)", next: 'RESULT:LDS' },
-      { text: "Jesus is a created being — not God, but the first and greatest of God's creations (Jehovah's Witness / Arian view)", next: 'RESULT:JW' },
+      { text: "The Father, Son, and Holy Ghost are three distinct beings — not one substance", next: 'RESULT:LDS' },
+      { text: "Jesus is a created being — not God, but the first and greatest of God's creations", next: 'RESULT:JW' },
       { text: "I am post-Christian or pluralist — traditional doctrines about Jesus don't define my faith", next: 'RESULT:UU' }
     ]
   },
