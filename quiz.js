@@ -6,14 +6,7 @@ const LETTERS = ['A','B','C','D','E','F'];
 const denominations = {
 
 /* ── CATHOLIC / EASTERN ── */
-   NOVAT: {
-    name: "Novatianist",
-    family: "Early Church Rigorist",
-    tagline: "The Pure Church — no compromise with the lapsed",
-    desc: "You resonate with the ancient Novatianist movement. Following the intense persecutions of the 3rd century, they insisted on maintaining a pure church. They refused to readmit Christians who had denied the faith or sacrificed to pagan gods (the lapsi), believing such grave sins could not be forgiven by the church on earth — only by God after lifelong penance. They saw themselves as the faithful remnant preserving the church’s holiness.",
-    traits: [{ label: "Church", val: "A congregation of saints only" },{ label: "Discipline", val: "No readmission for serious sins" },{ label: "Sacraments", val: "Rebaptism of those from other groups" },{ label: "Morality", val: "Strict — no second marriage" }]
-  },
-   RC: {
+RC: {
     name: "Roman Catholic",
     family: "Western Catholic",
     tagline: "The fullness of the faith, with Peter as visible head",
@@ -56,6 +49,15 @@ const denominations = {
     traits: [{ label: "Sacraments", val: "Seven — valid succession" },{ label: "Authority", val: "Ecumenical councils (first seven)" },{ label: "Worship", val: "Western liturgy (vernacular)" },{ label: "Soteriology", val: "Catholic — synergistic" }]
   },
 
+  /* ── EARLY CHURCH RIGORIST ── */
+  NOVAT: {
+    name: "Novatianist",
+    family: "Early Church Rigorist",
+    tagline: "The Pure Church — no compromise with the lapsed",
+    desc: "You resonate with the ancient Novatianist movement. After the intense persecutions of the 3rd century, they insisted on keeping the church completely pure. They refused to readmit Christians who had denied the faith or sacrificed to pagan gods during persecution, believing such serious sins could not be forgiven by the church on earth — only by God after a lifetime of penance. They saw themselves as the faithful remnant preserving the church’s holiness.",
+    traits: [{ label: "Church", val: "A congregation of saints only" },{ label: "Discipline", val: "No readmission for serious sins" },{ label: "Sacraments", val: "Rebaptism of those from other groups" },{ label: "Morality", val: "Strict — no second marriage" }]
+  },
+   
   /* ── LUTHERAN ── */
   LU_LCMS: {
     name: "Lutheran (LCMS)",
@@ -429,8 +431,8 @@ const questions = {
       { text: "Yes — Father, Son, and Holy Spirit: one God, three persons, co-equal and co-eternal. The Nicene Creed is correct.", next: 'q2' },
       { text: "The Father, Son, and Holy Ghost are three distinct beings — not one substance", next: 'RESULT:LDS' },
       { text: "Jesus is a created being — not God, but the first and greatest of God's creations", next: 'RESULT:JW' },
-      { text: "I am post-Christian or pluralist — traditional doctrines about Jesus don't define my faith", next: 'RESULT:UU' }
       { text: "I believe the church must remain completely pure — no readmitting those who seriously fall away under persecution", next: 'RESULT:NOVAT' },
+      { text: "I am post-Christian or pluralist — traditional doctrines about Jesus don't define my faith", next: 'RESULT:UU' }
     ]
   },
 
