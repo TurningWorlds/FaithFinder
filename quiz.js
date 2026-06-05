@@ -487,7 +487,7 @@ RC: {
 ───────────────────────────────────────────────────────── */
 const questions = {
 
-```js
+js
 q1: {
   text: "Do you affirm the traditional Christian doctrine of the Trinity — one God in three co-equal, co-eternal persons?",
   sub: "The most fundamental dividing line in Christian history.",
