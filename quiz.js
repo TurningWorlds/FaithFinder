@@ -487,17 +487,58 @@ RC: {
 ───────────────────────────────────────────────────────── */
 const questions = {
 
-  q1: {
-    text: "Do you affirm the traditional Christian doctrine of the Trinity — one God in three co-equal, co-eternal persons?",
-    sub: "The most fundamental dividing line in all of Christian history.",
-    opts: [
-      { text: "Yes — Father, Son, and Holy Spirit: one God, three persons, co-equal and co-eternal. The Nicene Creed is correct.", next: 'q2' },
-      { text: "The Father, Son, and Holy Ghost are three distinct beings — not one substance", next: 'RESULT:LDS' },
-      { text: "Jesus is a created being — not God, but the first and greatest of God's creations", next: 'RESULT:JW' },
-      { text: "I believe the church must remain completely pure — no readmitting those who seriously fall away under persecution", next: 'RESULT:NOVAT' },
-      { text: "I am post-Christian or pluralist — traditional doctrines about Jesus don't define my faith", next: 'RESULT:UU' }
-    ]
-  },
+```js
+q1: {
+  text: "Do you affirm the traditional Christian doctrine of the Trinity — one God in three co-equal, co-eternal persons?",
+  sub: "The most fundamental dividing line in Christian history.",
+  opts: [
+    { text: "Yes — Father, Son, and Holy Spirit: one God, three persons, co-equal and co-eternal.", next: 'q2' },
+    { text: "The Father, Son, and Holy Ghost are three distinct beings — not one substance", next: 'RESULT:LDS' },
+    { text: "Jesus is a created being — not God, but the first and greatest of God's creations", next: 'RESULT:JW' },
+    { text: "I am post-Christian or pluralist — traditional doctrines about Jesus don't define my faith", next: 'RESULT:UU' }
+  ]
+},
+
+q2: {
+  text: "What should the visible Church be?",
+  sub: "This separates institutional, sacramental, free-church, and rigorist views of the Church.",
+  opts: [
+    { text: "A visible apostolic communion governed by bishops and sacramental authority", next: 'q3' },
+    { text: "A church ordered by Scripture, preaching, and the sacraments", next: 'q7' },
+    { text: "A gathered community of regenerate believers", next: 'q20' },
+    { text: "A pure body of saints that must not be defiled by grave public sinners", next: 'qNOV1' }
+  ]
+},
+
+qNOV1: {
+  text: "How should the Church treat baptized Christians who deny Christ under persecution and later repent?",
+  sub: "This was the core controversy behind the Novatian schism after the Decian persecution.",
+  opts: [
+    { text: "They may be restored after repentance, confession, and penance", next: 'q3' },
+    { text: "They may repent, but the Church cannot restore them to communion; forgiveness belongs to God alone", next: 'qNOV2' },
+    { text: "They should be restored quickly if they are sincere", next: 'q20' }
+  ]
+},
+
+qNOV2: {
+  text: "Do you believe certain grave post-baptismal sins should permanently exclude someone from communion?",
+  sub: "Later Novatianists applied their strict discipline beyond apostasy to other mortal sins.",
+  opts: [
+    { text: "Yes — apostasy, idolatry, murder, adultery, or similar grave sins should bar communion", next: 'qNOV3' },
+    { text: "No — the Church should restore all truly repentant Christians", next: 'q3' },
+    { text: "Only temporarily — discipline should aim at full restoration", next: 'q7' }
+  ]
+},
+
+qNOV3: {
+  text: "Which matters more for the Church’s identity?",
+  sub: "Novatianists called themselves Katharoi, meaning 'the Pure Ones.'",
+  opts: [
+    { text: "Visible purity, strict holiness, and refusing compromise with the lapsed", next: 'RESULT:NOVAT' },
+    { text: "Unity under the recognized bishops, even when discipline is merciful", next: 'q3' },
+    { text: "Local congregational discipline without a universal episcopal structure", next: 'q20' }
+  ]
+},
 
   q2: {
     text: "How many sacraments does your tradition recognize?",
