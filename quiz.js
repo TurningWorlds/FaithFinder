@@ -746,14 +746,36 @@ q9c: {
     ]
   },
 
-  q21: {
-    text: "What is your eschatological framework?",
-    sub: "How you view the end times correlates strongly with your theological tribe in the Baptist world.",
-    opts: [
-      { text: "Dispensational premillennialism — Christ returns before the millennium; Israel and Church are distinct; rapture theology", next: 'q22' },
-      { text: "Historic premillennialism or amillennialism — eschatology is important but not a tribal marker for me", next: 'q23' }
-    ]
-  },
+q21: {
+  text: "What is your eschatological framework?",
+  sub: "Your understanding of Christ's return, the millennium, and Israel often reflects broader theological commitments.",
+  opts: [
+    {
+      text: "Dispensational Premillennialism — pre-tribulation rapture, Israel and the Church are distinct, literal future millennium",
+      next: 'q22'
+    },
+    {
+      text: "Historic Premillennialism — Christ returns before the millennium, but no separate Israel/Church distinction",
+      next: 'q23'
+    },
+    {
+      text: "Amillennialism — the millennium is symbolic and is being fulfilled through Christ's reign now",
+      next: 'q23'
+    },
+    {
+      text: "Postmillennialism — the gospel will gradually transform the world before Christ returns",
+      next: 'q23'
+    },
+    {
+      text: "Partial Preterism — many end-times prophecies were fulfilled in the first century, but Christ's return is future",
+      next: 'q23'
+    },
+    {
+      text: "I'm unsure or don't consider eschatology a major factor in my church identity",
+      next: 'q23'
+    }
+  ]
+},
 
   q22: {
     text: "Which describes your Baptist identity?",
