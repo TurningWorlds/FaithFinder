@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faith Finder</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What tradition are you?</title>
+  <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
 
-<div id="quiz-root">
-  <h2 class="sr-only">What Christian denomination are you? — A detailed theological quiz</h2>
-
-  <div class="quiz-header">
-    <h1>Faith Finder</h1>
-    <p>Up to 20 questions. Specific enough to actually mean something.</p>
-  </div>
+<div id="app">
 
   <div id="screen-intro" class="screen active">
-    <p class="intro-body">This isn't a "do you like hymns or praise music" quiz. We're going deep — ecclesiology, soteriology, sacramental theology, eschatology, liturgy, polity, social teaching, and more. Answer as honestly as you can, even if you've never thought about some of these questions before.</p>
-    <p class="intro-body">Results cover over 50 traditions: Roman Catholic, Eastern Orthodox, Lutheran (LCMS/ELCA), Anglican/Episcopal, Presbyterian (PCA/PCUSA), Methodist, Baptist (SBC/ABC), Pentecostal, Quaker, Mennonite/Anabaptist, Reformed/Continental, Congregationalist, Adventist, Unitarian Universalist, and more.</p>
-    <button class="start-btn" onclick="startQuiz()">Begin the quiz</button>
+    <div class="intro-header">
+      <h1>What tradition are you?</h1>
+      <p>A deep, detailed quiz mapping your beliefs, practices, and convictions to the Christian tradition you actually belong to — or belong nearest to. Answer honestly. There are no wrong answers.<br><br>Covers ~55 denominations. Takes 5–15 minutes.</p>
+    </div>
+    <button class="start-btn" onclick="startQuiz()">Begin →</button>
   </div>
 
   <div id="screen-quiz" class="screen">
-    <div class="progress-bar-wrap">
-      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill" style="width:0%"></div>
     </div>
-    <div class="q-counter" id="q-counter">Question 1 of 50</div>
+    <div id="trail-container" class="trail"></div>
+    <div class="q-meta">
+      <span class="q-num" id="q-counter">Question 1</span>
+    </div>
     <div class="q-text" id="q-text"></div>
-    <div class="q-subtext" id="q-subtext"></div>
-    <div class="options-list" id="options-list"></div>
+    <div class="q-sub" id="q-subtext"></div>
+    <div class="opts" id="options-list"></div>
     <div class="nav-row">
-      <button class="nav-btn" id="btn-back" onclick="goBack()" disabled>← Back</button>
-      <span class="skip-link" onclick="skipQuestion()">Skip</span>
-      <button class="nav-btn primary" id="btn-next" onclick="goNext()" disabled>Next →</button>
+      <button class="back-btn" id="btn-back" onclick="goBack()" disabled>← Back</button>
     </div>
   </div>
 
   <div id="screen-result" class="screen">
-    <div class="result-header-row">
-      <div class="q-counter" id="result-tradition-family"></div>
-      <div class="result-denom" id="result-denom-name"></div>
-      <div class="result-tagline" id="result-tagline"></div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill2" style="width:100%"></div>
     </div>
+    <div class="result-family" id="result-tradition-family"></div>
+    <div class="result-name" id="result-denom-name"></div>
+    <div class="result-tagline" id="result-tagline"></div>
+    <div class="divider"></div>
     <div class="result-desc" id="result-desc"></div>
-    <div class="result-traits" id="result-traits"></div>
-    <hr class="sect-divider" />
-    <div class="score-bars" id="score-bars"></div>
-    <div class="runner-up-section">
-      <div class="runner-up-title">Also close</div>
-      <div class="runner-up-chips" id="runner-up-chips"></div>
+    <div class="traits" id="result-traits"></div>
+    <div class="path-section">
+      <h3>Your path through the quiz</h3>
+      <div id="path-taken"></div>
     </div>
-    <button class="retry-btn" onclick="restartQuiz()">Take it again</button>
+    <button class="restart-btn" onclick="restartQuiz()">Start over</button>
   </div>
+
 </div>
 
 <script src="quiz.js"></script>
